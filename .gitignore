@@ -1,14 +1,36 @@
-# Machine-local Spec Kit state — not meant to be shared.
-# Managed by the Specify CLI; safe to edit (your changes are preserved on refresh).
+# Dependencies
+node_modules/
 
-# Local pointer to the current feature directory. Rewritten every time you
-# switch features, so it is per-checkout state rather than something to share.
-feature.json
+# Next.js build output
+.next/
+out/
+dist/
+build/
 
-# Per-machine extension config overrides.
-extensions/*/local-config.yml
+# Local SQLite database files (device-only persistence)
+data/*.sqlite
+data/*.sqlite-shm
+data/*.sqlite-wal
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
 
-# Executable adapter packages and their per-checkout provenance registry.
-# Execution consent is stored separately in the user's local trust registry.
-integrations/packages/
-integrations/packages.json
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# Logs & test coverage
+*.log
+npm-debug.log*
+coverage/
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+.vscode/
+.idea/
+next-env.d.ts
+*.tsbuildinfo
